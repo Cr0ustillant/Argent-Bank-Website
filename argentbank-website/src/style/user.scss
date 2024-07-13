@@ -1,0 +1,120 @@
+div {
+    display: flex;
+    flex-direction: column;
+    .user-main {
+        background-color: #12002b;
+        flex: 1;
+        .user-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color:  white;
+            margin-bottom: 2rem;
+            h1 {
+                font-size: 2rem;
+                margin: 1rem 0 0 0;
+            }
+        
+            .modal {
+                display: flex;
+                flex-direction: column;
+
+                form {
+                    align-items: center;
+                    .input-container {
+                        display: flex;
+                        flex-direction: column;
+                        .input-wrapper {
+                            display: flex;
+                            flex-direction: row;
+                            margin-bottom: 1rem;
+                        }
+                    }
+                    .button-container {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content:space-between;
+                        button {
+                            display: block;
+                            padding: 10px 30px;
+                            font-size: 1.1rem;
+                            font-weight: bold;
+                            border-color: #00bc77;
+                            background-color: #00bc77;
+                            color: #fff;
+                    }}
+                }
+
+                .form-button {
+                    display: block;
+                    padding: 8px;
+                    font-weight: bold;
+                    margin-top: 1rem;
+                    border-color: #00bc77;
+                    background-color: #00bc77;
+                    color: #fff;
+                } 
+            } 
+        }
+
+
+        .user-account {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid black;
+            background-color: #fff;
+            width: 80%;
+            margin: 0 auto;
+            flex-direction: row;
+            padding: 1.5rem;
+            box-sizing: border-box;
+            margin-bottom: 2rem;
+            .account-content {
+                text-align: left;
+                flex: 1;
+                width: 100%;
+                h3 {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 1rem;
+                    font-weight: normal;
+                }
+                .account-amount {
+                    margin: 0;
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                }
+                .account-amount-description {
+                    margin: 0;
+                }
+            }
+            .account-button {
+                flex: 0;
+                button {
+                    display: block;
+                    padding: 8px;
+                    text-wrap: nowrap;
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                    margin-top: 1rem;
+                    border-color: #00bc77;
+                    background-color: #00bc77;
+                    color: #fff;
+                }
+            }
+        }
+    }  
+}
+
+@media (max-width: 720px) {
+    div .user-main .user-account {
+        flex-direction: column;
+        .user-content {
+            flex: 0;
+        }
+        .account-button {
+            width: 100%;
+        }
+    } 
+}

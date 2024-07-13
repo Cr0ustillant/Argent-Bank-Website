@@ -1,5 +1,5 @@
-import FeaturesItems from '../components/featuresItems/FeaturesItems';
 import '../style/home.css';
+import FeaturesItems from '../components/featuresItems/FeaturesItems';
 import dataFeatures from '../data/features.json';
 
 function Home() {
@@ -18,6 +18,7 @@ function Home() {
             <section className='features-container'>
                 {dataFeatures.map((features) => (
                         <FeaturesItems 
+                            key={features.alt}
                             src={features.src} 
                             title={features.title} 
                             text={features.text} 

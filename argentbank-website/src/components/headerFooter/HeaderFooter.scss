@@ -8,18 +8,30 @@ header {
         max-width: 100%;
     }
     nav {
+        display: flex;
+        flex-direction: row;
         ul,li {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
             padding: 0;
             margin: 0;
             list-style: none;
             font-weight: bold;
             color: #2c3e50;
-
+            align-items: center;
             margin-right: 0.5rem;
-            a {
-                text-decoration: none;   
-            }
-      }
+        }
+    }
+    .signOut {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;   
     }
 
 }
@@ -29,4 +41,8 @@ footer {
     justify-content: center;
     border-top: 2px solid #ccc;
     padding: 2rem 0 1.5rem;
+    p {
+        margin: 0;
+        padding: 0;
+    }
 }

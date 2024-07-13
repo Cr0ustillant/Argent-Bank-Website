@@ -1,0 +1,49 @@
+div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: 1;
+    .sign-in-main {
+        display: flex;
+        flex: 1;
+        background-color: #12002b;
+        .sign-in-content {
+            box-sizing: border-box;
+            background-color: white;
+            width: 300px;
+            margin: auto;
+            margin-top: 3rem;
+            padding: 2rem;
+            i {
+                font-size: 2rem;
+            }
+            .input-wrapper {
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                margin-bottom: 1rem;
+            }
+            .input-remember {
+                display: flex;
+                flex-direction: row;
+
+            }
+            .error-message {
+                color: red;
+                text-align: left;
+                font-weight: bold;
+            }
+            button {
+                display: block;
+                width: 100%;
+                padding: 8px;
+                font-size: 1.1rem;
+                font-weight: bold;
+                margin-top: 1rem;
+                border-color: #00bc77;
+                background-color: #00bc77;
+                color: #fff;
+            }
+        }
+    }   
+}
