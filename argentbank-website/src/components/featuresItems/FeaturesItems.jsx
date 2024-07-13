@@ -2,7 +2,7 @@ function FeaturesItems({src , title , text , alt}) {
     return (
         <figure>
             <img src={src} alt={alt} />
-            <h3>{title}</h3>
+            <h2>{title}</h2>
             <p>{text}</p>
         </figure>
     )

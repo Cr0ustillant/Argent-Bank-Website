@@ -59,7 +59,7 @@ function Form() {
                 <label htmlFor="remenber-me">Remember me</label>
             </div>
             {errorMessage && <p className='error-message'>Wrong email or password</p>}
-            <button type="submit" >SignIn</button>
+            <button type="submit">Sign In</button>
         </form>
     )
 }

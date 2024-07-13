@@ -8,30 +8,35 @@ header {
         max-width: 100%;
     }
     nav {
-        display: flex;
-        flex-direction: row;
-        ul,li {
-            display: flex;
-            flex-direction: row;
-            gap: 5px;
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            font-weight: bold;
-            color: #2c3e50;
+        ul {
+            gap: 0.5rem;
+            font-weight: bold;  
             align-items: center;
             margin-right: 0.5rem;
+            li {
+                
+                span {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 0.25rem;
+                }
+            }
         }
     }
     .signOut {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        gap: 5px;
+        gap: 0.7rem;
     }
     a {
         text-decoration: none;
-        color: inherit;   
+        color: inherit;
+    } 
+    p , ul , li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
     }
 
 }

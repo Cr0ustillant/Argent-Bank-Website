@@ -22,10 +22,16 @@ div {
                 flex-direction: column;
                 text-align: left;
                 margin-bottom: 1rem;
+                font-weight: bold;
+                input {
+                    padding: 5px;
+                    font-size: 1.2rem;
+                }
             }
             .input-remember {
                 display: flex;
                 flex-direction: row;
+                gap: 0.25rem;
 
             }
             .error-message {
@@ -40,9 +46,10 @@ div {
                 font-size: 1.1rem;
                 font-weight: bold;
                 margin-top: 1rem;
-                border-color: #00bc77;
                 background-color: #00bc77;
                 color: #fff;
+                text-decoration: underline;
+                border: none;
             }
         }
     }   

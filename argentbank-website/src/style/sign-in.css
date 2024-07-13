@@ -29,11 +29,18 @@ div .sign-in-main .sign-in-content .input-wrapper {
   flex-direction: column;
   text-align: left;
   margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+div .sign-in-main .sign-in-content .input-wrapper input {
+  padding: 5px;
+  font-size: 1.2rem;
 }
 
 div .sign-in-main .sign-in-content .input-remember {
   display: flex;
   flex-direction: row;
+  gap: 0.25rem;
 }
 
 div .sign-in-main .sign-in-content .error-message {
@@ -49,7 +56,8 @@ div .sign-in-main .sign-in-content button {
   font-size: 1.1rem;
   font-weight: bold;
   margin-top: 1rem;
-  border-color: #00bc77;
   background-color: #00bc77;
   color: #fff;
+  text-decoration: underline;
+  border: none;
 }

@@ -2,7 +2,6 @@ const SIGNIN_SUCCESS = "SIGNIN_SUCCESS";
 const SIGNIN_FAIL = "SIGNIN_FAIL";
 const SIGNOUT = "SIGNOUT";
 
-/* Authentication actions */
 export const signInSuccess = (token) => {
     return {
         type: SIGNIN_SUCCESS,

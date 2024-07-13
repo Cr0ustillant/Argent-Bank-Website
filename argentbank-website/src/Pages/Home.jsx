@@ -6,9 +6,8 @@ function Home() {
     return (
         <main className='home-main'>
             <section className='hero'>
-                <img src={dataFeatures[0].heroSrc} alt="Bank tree hero" />
                 <article>
-                    <h2>Promoted Content</h2>
+                    <h1>Promoted Content</h1>
                     <p className="subtitle">No fees.</p>
                     <p className="subtitle">No minimum deposit.</p>
                     <p className="subtitle">High interest rates.</p>

@@ -7,7 +7,8 @@ import UserAccount from "../components/userAccount/UserAccount";
 import accountData from "../data/accountData.json";
 import "../style/user.css";
 
-const User = () => {
+function User() {
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const userData = useSelector((store) => store.USER.userData);
@@ -15,7 +16,7 @@ const User = () => {
 
   const [newUserName, setNewUserName] = useState(userData.userName);
 
-  const handleSave = async (e) => {
+  const handleUpdate = async (e) => {
     e.preventDefault();
 
     const token = sessionStorage.getItem("token");
@@ -88,21 +89,21 @@ const User = () => {
           </h1>)}
           <div className="modal">
             {modal && (
-          <form onSubmit={handleSave}>
-            <h2>Edit user info of</h2>
+          <form onSubmit={handleUpdate}>
+            <h2>Edit user info</h2>
             <div className="input-container">
               <div className="input-wrapper">
-                <label htmlFor="userName">User name : </label>
+                <label htmlFor="userName">User name: </label>
                 <input type="text" id="userName" placeholder={userData.userName} 
                 onChange={(e) => setNewUserName(e.target.value)}
               />
               </div>
               <div className="input-wrapper">
-                <label htmlFor="firstName">First name :</label>
+                <label htmlFor="firstName">First name: </label>
                 <input type="text" id="firstName" placeholder={userData.firstName} readOnly/>
               </div>
               <div className="input-wrapper">
-                <label htmlFor="lastName">Last name : </label>
+                <label htmlFor="lastName">Last name: </label>
                 <input type="text" id="lastName" placeholder={userData.lastName} readOnly/>
               </div>
             </div>

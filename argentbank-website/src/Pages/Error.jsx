@@ -4,10 +4,9 @@ import '../style/error.css';
 function Error() {
     return (
         <main className="main-error">
-            <div>
-                <p>Erreur</p>
-                <Link to="/"><span>Retourner à l'accueil</span></Link>  
-            </div>
+                <p>Error 404</p>
+                <span>Page not found</span>
+                <Link to="/"><span>Return to home page</span></Link>  
         </main>
     )
 }

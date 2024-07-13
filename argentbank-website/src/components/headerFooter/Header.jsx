@@ -20,24 +20,35 @@ function Header() {
   };
     return (
         <header>
-            <Link to="/"><img src={LogoSrc[0].logo} alt="Logo" /></Link>
+            <Link to="/"><img src={LogoSrc[0].logo} alt="ArgentBank" /></Link>
                 
             <nav>
                 <ul>
                     {!userStatus.connected && (
                         <li className="signIn">
-                            <i className='fa fa-user-circle' />
-                            <Link to='/sign-in'><p>Sign In</p></Link>
+                            <Link to='/sign-in'>
+                                <span>
+                                    <i className='fa fa-user-circle' />
+                                    <p>Sign In</p>
+                                </span>
+                            </Link>
                         </li>
                     )}
                     {userStatus.connected && (
-                    <Link to='/' onClick={handleSignOut} className="signOut">
-                        <i className='fa fa-user-circle' />
-                        {userData.userName}
-                        {console.log(userData.userName,"userName :")}
-                        <i className="fa fa-sign-out"></i>
-                        <p>Sign Out</p>
-                    </Link>
+                        <li className="signOut">
+                            <Link to="/user">
+                                <span>
+                                    <i className='fa fa-user-circle'></i>
+                                    {userData.userName}
+                                </span> 
+                            </Link>
+                            <Link to="/" onClick={handleSignOut} >
+                                <span>
+                                    <i className="fa fa-sign-out"></i>
+                                    <p>Sign Out</p>
+                                </span>
+                            </Link>
+                        </li>
                     )}
                 </ul>
             </nav>
