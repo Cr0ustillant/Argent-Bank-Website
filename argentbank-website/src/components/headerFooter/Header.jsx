@@ -16,12 +16,11 @@ function Header() {
     sessionStorage.removeItem("token")
     localStorage.removeItem("token");
     dispatch(userSignOut());
-    navigate("/");
+    navigate("/sign-in");
   };
     return (
         <header>
-            <Link to="/"><img src={LogoSrc[0].logo} alt="ArgentBank" /></Link>
-                
+            <Link to="/"><img src={LogoSrc[0].logo} alt="ArgentBank" /></Link>      
             <nav>
                 <ul>
                     {!userStatus.connected && (
@@ -42,7 +41,7 @@ function Header() {
                                     {userData.userName}
                                 </span> 
                             </Link>
-                            <Link to="/" onClick={handleSignOut} >
+                            <Link to="/sign-in" onClick={handleSignOut} >
                                 <span>
                                     <i className="fa fa-sign-out"></i>
                                     <p>Sign Out</p>

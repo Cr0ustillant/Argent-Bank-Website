@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { signInFailed, signInSuccess } from '../../redux/actions/userAction';
+import { userSignIn } from '../../redux/reducers/reducer';
 
 function Form() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [rememberMe, setRememberMe] = useState(false);
     const [errorMessage, setErrorMessage] = useState(false);
 
     const navigate = useNavigate();
@@ -23,20 +22,18 @@ function Form() {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({email, password}),
+                body: JSON.stringify({
+                    email: email,
+                    password: password,
+                }),
             });
             if (response.ok) {
                 const data = await response.json();
                 const token = data.body.token;
-                dispatch(signInSuccess(token));
+                dispatch(userSignIn(token));
                 sessionStorage.setItem("token", token);
-                if (rememberMe) {
-                    localStorage.setItem("token", token);
-                }
                 navigate('/user');
             } else {
-                const error = "Wrong email/password"
-                dispatch(signInFailed(error));
                 setErrorMessage(true);
             }
         } catch (error) {
@@ -48,14 +45,14 @@ function Form() {
         <form onSubmit={handleSubmit}>
             <div className='input-wrapper'>
                 <label htmlFor="username">Username</label>
-                <input type="text" id="username" value={email} onChange={(event) => setEmail(event.target.value)}/>
+                <input type="text" id="username" value={email} required onChange={(event) => setEmail(event.target.value)}/>
             </div>
             <div className='input-wrapper'>
                 <label htmlFor="password">Password</label>
-                <input type="password" id="password" value={password} onChange={(event) => setPassword(event.target.value)}/>
+                <input type="password" id="password" value={password} required onChange={(event) => setPassword(event.target.value)}/>
             </div>
             <div className='input-remember'>
-                <input type="checkbox" id="remenber-me" onChange={(event) => setRememberMe(event.target.checked)}/>
+                <input type="checkbox" id="remenber-me"/>
                 <label htmlFor="remenber-me">Remember me</label>
             </div>
             {errorMessage && <p className='error-message'>Wrong email or password</p>}

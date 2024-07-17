@@ -11,7 +11,7 @@ function User() {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const userData = useSelector((store) => store.USER.userData);
+  const userData = useSelector((store) => store.USER.userData); 
   const [modal, setModal] = useState(false);
 
   const [newUserName, setNewUserName] = useState(userData.userName);
@@ -80,7 +80,6 @@ function User() {
   };
 
   return (
-    <div>
       <main className="user-main">
         <section className="user-title">
           {!modal && (<h1>Welcome back
@@ -127,7 +126,6 @@ function User() {
           />
         ))}
       </main>
-    </div>
   );
 };
 
